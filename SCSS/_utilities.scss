@@ -1,0 +1,27 @@
+.container {
+  max-width: 1100px;
+  padding: 0 30px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+// margin and padding classes for multiple applications
+$spaceamounts: (1, 2, 3, 4, 5); // create a variable and a list
+
+// loops through each number
+@each $space in $spaceamounts {
+  // access each one with this syntax (like template literals in js)
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}
